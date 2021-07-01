@@ -1,0 +1,300 @@
+
+$col1: #313540;
+$txtCol: #fff;
+$detailCol: linear-gradient(0deg
+, #d3812e 0%, #e6b33e 100%);
+$detailCol2: #F4D047;
+
+@mixin btn(){
+    color: $txtCol;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    font-family: 'Baloo Da', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-radius: 50em;
+    vertical-align: middle;
+    margin: 0 0.125rem;
+    border: 0 none;
+    letter-spacing: -0.075em;
+    padding: .8em 1.5em;
+    cursor: pointer;
+    //animation: swell 1000ms ease-in-out 2s infinite alternate;
+};
+@mixin btnBorder(){
+    color: #1A252C;
+    transition: background .5s ease-in-out;
+    background: $detailCol;
+};
+@mixin rect($col){
+    stroke: $col;
+    width: inherit;
+    height: inherit;
+    fill: transparent;
+    stroke-width: 0.275em;
+};
+@mixin flex(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};
+@mixin mqMax($size){
+    @media only screen and (max-width: $size){
+        @content
+    }
+};
+@mixin mqMin($size){
+    @media only screen and (min-width: $size){
+        @content
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    stroke-dasharray: 250% 50%;
+    stroke-dashoffset: 10%;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.7s ease-in-out;
+    &:hover{
+        stroke-dashoffset: 160%;
+    }
+    rect{
+        @include rect($detailCol2);
+    }
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.2);
+}
+
+.mobileBtn{
+    @include flex();
+    justify-content: center;
+    height: 5em;
+    width: 100vw;
+    max-width: 100%;
+    display:none;
+    position: fixed;
+    bottom: 0;
+    background: $col1;
+
+    .signUp{
+        @include btn();
+        width: 50%;
+    }
+    @include mqMax(500px){
+        display: flex;
+    }
+    button{
+        @include btn();
+        @include btnBorder();
+        width: 60%;
+        position:relative;             
+    }
+}
+
+.banner{
+    @include flex();
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 60em;
+    color: $txtCol;
+    background: url('/assets/banner.png') no-repeat;
+    background-size: cover;
+    background-position: center;;
+
+    .offer{
+        width: 28em;
+        padding: 2em;
+        margin: 3em 0;
+        background: $col1;
+        z-index: 2;
+        @include flex();
+        .logo{
+            width: 10em;
+        }
+        .offerTxt{
+            font-size: 3.5em;
+            font-weight: 800;
+            text-align: center;
+            margin: .5em 0;
+        }
+        .terms{
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        button{
+            @include mqMax(500px){
+                display:none;
+            }
+            @include btn();
+            @include btnBorder();
+            width: 80%;
+            position:relative;             
+        }
+    }
+    .secondary{
+        display: none;
+        @include mqMax(1024px){
+            @include flex();
+            flex-direction: row!important;
+            justify-content: space-between;
+            width: 24em;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 1.2em;
+            background: $col1;
+            padding-left: 1em;
+            #icon{
+                background: $detailCol;
+                padding: 1.2em 1em;;
+            }
+        }
+    }
+}
+.info{
+    @include flex();
+    .steps{
+        @include mqMax(1024px){
+            width: 90vw;
+        }
+        @include mqMax(992px){
+            width: 80vw;
+            justify-content: space-between;
+        }
+        @include flex();
+        flex-direction: row;
+        justify-content: center;
+        width: 80vw;
+        margin: 1em 0;
+        .step{
+            @include mqMax(992px){
+                width: 10em;
+                height: 10em;
+                flex-direction: column-reverse;
+                text-align: center;
+                color: $col1;
+                background: #fff;
+                clip-path: none;
+            }
+            @include flex();
+            flex-direction: row-reverse;
+            justify-content: center;
+            width: 24em;
+            height: 8em;
+            color: $txtCol;
+            background: $col1;
+            clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 10% 51%, 0% 0%);
+            .index{
+                @include mqMax(992px){
+                    color: $txtCol;
+                    background: $col1;
+                    padding: .1em .5em;
+                }
+                font-size: 3em;
+                color: $col1;
+                padding: .2em;
+                text-align:center;
+                border-radius: 1em;
+                background: $txtCol;
+            }
+            .stepInfo{
+                @include mqMax(992px){
+                    font-size: 1em;
+                    margin: 1em 0 0 0;
+                }
+                margin-left: .5em;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                .title{
+                    @include mqMax(992px){
+                        color: #000;
+                    }
+                    color: $detailCol2;
+                }
+            }
+        }
+    }
+    .TC{
+        @include mqMax(768px){
+            width: 90vw;
+        }
+        width: 60vw;
+        padding: 3em;
+        margin-bottom: 1em;
+        font-size: .8em;;
+        color: $txtCol;
+        background: $col1;
+        h2{
+            font-size: 2em;
+            margin-bottom: .8em;
+        }
+        .copyright{
+            line-height: 2em;
+        }
+    }
+}
+footer{
+    @include mqMax(500px){
+        padding-bottom: 5em;
+    }
+    @include flex();
+    background: $col1;
+    .logo{
+        width: 8em;
+    }
+    .icons{
+        @include flex();
+        width: 100%;
+        background: rgba(0,0,0,0.2);
+        #iconList{
+            width: 30em;
+        }
+    }
+    #gamble-aware{
+        width: 20em;
+        margin: 1em;
+    }
+    #mga{
+        width: 8em;
+    }
+}
+
+@keyframes swell {
+    0%{transform: scale(1);}
+    50%{transform: scale(.8)}
+    100%{transform: scale(1.2);}
+}

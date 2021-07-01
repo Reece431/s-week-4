@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke-dasharray: 250% 50%;
+  stroke-dashoffset: 10%;
+  stroke-linecap: round;
+  -webkit-transition: stroke-dashoffset 0.7s ease-in-out;
+  transition: stroke-dashoffset 0.7s ease-in-out;
+}
+
+svg:hover {
+  stroke-dashoffset: 160%;
+}
+
+svg rect {
+  stroke: #F4D047;
+  width: inherit;
+  height: inherit;
+  fill: transparent;
+  stroke-width: 0.275em;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mobileBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5em;
+  width: 100vw;
+  max-width: 100%;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background: #313540;
+}
+
+.mobileBtn .signUp {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Baloo Da', sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-radius: 50em;
+  vertical-align: middle;
+  margin: 0 0.125rem;
+  border: 0 none;
+  letter-spacing: -0.075em;
+  padding: .8em 1.5em;
+  cursor: pointer;
+  width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .mobileBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.mobileBtn button {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Baloo Da', sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-radius: 50em;
+  vertical-align: middle;
+  margin: 0 0.125rem;
+  border: 0 none;
+  letter-spacing: -0.075em;
+  padding: .8em 1.5em;
+  cursor: pointer;
+  color: #1A252C;
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d3812e), to(#e6b33e));
+  background: linear-gradient(0deg, #d3812e 0%, #e6b33e 100%);
+  width: 60%;
+  position: relative;
+}
+
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 60em;
+  color: #fff;
+  background: url("/assets/banner.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner .offer {
+  width: 28em;
+  padding: 2em;
+  margin: 3em 0;
+  background: #313540;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .offer .logo {
+  width: 10em;
+}
+
+.banner .offer .offerTxt {
+  font-size: 3.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: .5em 0;
+}
+
+.banner .offer .terms {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.banner .offer button {
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Baloo Da', sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-radius: 50em;
+  vertical-align: middle;
+  margin: 0 0.125rem;
+  border: 0 none;
+  letter-spacing: -0.075em;
+  padding: .8em 1.5em;
+  cursor: pointer;
+  color: #1A252C;
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d3812e), to(#e6b33e));
+  background: linear-gradient(0deg, #d3812e 0%, #e6b33e 100%);
+  width: 80%;
+  position: relative;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner .offer button {
+    display: none;
+  }
+}
+
+.banner .secondary {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner .secondary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-direction: row !important;
+        flex-direction: row !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 24em;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.2em;
+    background: #313540;
+    padding-left: 1em;
+  }
+  .banner .secondary #icon {
+    background: -webkit-gradient(linear, left bottom, left top, from(#d3812e), to(#e6b33e));
+    background: linear-gradient(0deg, #d3812e 0%, #e6b33e 100%);
+    padding: 1.2em 1em;
+  }
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info .steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80vw;
+  margin: 1em 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .info .steps {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .info .steps {
+    width: 80vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.info .steps .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24em;
+  height: 8em;
+  color: #fff;
+  background: #313540;
+  -webkit-clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 10% 51%, 0% 0%);
+          clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 10% 51%, 0% 0%);
+}
+
+@media only screen and (max-width: 992px) {
+  .info .steps .step {
+    width: 10em;
+    height: 10em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+    color: #313540;
+    background: #fff;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
+.info .steps .step .index {
+  font-size: 3em;
+  color: #313540;
+  padding: .2em;
+  text-align: center;
+  border-radius: 1em;
+  background: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .info .steps .step .index {
+    color: #fff;
+    background: #313540;
+    padding: .1em .5em;
+  }
+}
+
+.info .steps .step .stepInfo {
+  margin-left: .5em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+  .info .steps .step .stepInfo {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+  }
+}
+
+.info .steps .step .stepInfo .title {
+  color: #F4D047;
+}
+
+@media only screen and (max-width: 992px) {
+  .info .steps .step .stepInfo .title {
+    color: #000;
+  }
+}
+
+.info .TC {
+  width: 60vw;
+  padding: 3em;
+  margin-bottom: 1em;
+  font-size: .8em;
+  color: #fff;
+  background: #313540;
+}
+
+@media only screen and (max-width: 768px) {
+  .info .TC {
+    width: 90vw;
+  }
+}
+
+.info .TC h2 {
+  font-size: 2em;
+  margin-bottom: .8em;
+}
+
+.info .TC .copyright {
+  line-height: 2em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #313540;
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    padding-bottom: 5em;
+  }
+}
+
+footer .logo {
+  width: 8em;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+footer .icons #iconList {
+  width: 30em;
+}
+
+footer #gamble-aware {
+  width: 20em;
+  margin: 1em;
+}
+
+footer #mga {
+  width: 8em;
+}
+
+@-webkit-keyframes swell {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes swell {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
