@@ -149,7 +149,7 @@ svg rect {
   max-width: 100%;
   height: 60em;
   color: #fff;
-  background: url("/assets/banner.png") no-repeat;
+  background: url("https://raw.githubusercontent.com/Reece431/s-week-4/main/assets/banner.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
