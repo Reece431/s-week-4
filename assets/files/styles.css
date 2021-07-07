@@ -73,6 +73,7 @@ svg rect {
   position: fixed;
   bottom: 0;
   background: #313540;
+  z-index: 100;
 }
 
 .mobileBtn .signUp {
@@ -95,6 +96,12 @@ svg rect {
   padding: .8em 1.5em;
   cursor: pointer;
   width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .mobileBtn .signUp {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -154,6 +161,12 @@ svg rect {
   background-position: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .banner {
+    height: 52em;
+  }
+}
+
 .banner .offer {
   width: 28em;
   padding: 2em;
@@ -172,6 +185,13 @@ svg rect {
           align-items: center;
 }
 
+@media only screen and (max-width: 500px) {
+  .banner .offer {
+    width: 18em;
+    padding: 1em;
+  }
+}
+
 .banner .offer .logo {
   width: 10em;
 }
@@ -181,6 +201,12 @@ svg rect {
   font-weight: 800;
   text-align: center;
   margin: .5em 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner .offer .offerTxt {
+    font-size: 2.5em;
+  }
 }
 
 .banner .offer .terms {
@@ -257,6 +283,13 @@ svg rect {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .banner .secondary {
+    width: 18em !important;
+    font-size: 1em !important;
+  }
+}
+
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +321,12 @@ svg rect {
           justify-content: center;
   width: 80vw;
   margin: 1em 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .info .steps {
+    width: 92vw;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -405,6 +444,12 @@ svg rect {
   margin-bottom: .8em;
 }
 
+@media only screen and (max-width: 500px) {
+  .info .TC h2 {
+    text-align: center;
+  }
+}
+
 .info .TC .copyright {
   line-height: 2em;
 }
@@ -445,11 +490,17 @@ footer .icons {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 footer .icons #iconList {
   width: 30em;
+}
+
+@media only screen and (max-width: 500px) {
+  footer .icons #iconList {
+    width: 20em;
+  }
 }
 
 footer #gamble-aware {

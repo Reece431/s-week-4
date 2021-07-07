@@ -109,8 +109,12 @@ svg{
     position: fixed;
     bottom: 0;
     background: $col1;
+    z-index: 100;
 
     .signUp{
+        @include mqMax(500px){
+            display:none;
+        }
         @include btn();
         width: 50%;
     }
@@ -126,6 +130,9 @@ svg{
 }
 
 .banner{
+    @include mqMax(500px){
+        height: 52em;
+    }
     @include flex();
     position: relative;
     width: 100vw;
@@ -137,6 +144,10 @@ svg{
     background-position: center;;
 
     .offer{
+        @include mqMax(500px){
+            width: 18em;
+            padding: 1em;
+        }
         width: 28em;
         padding: 2em;
         margin: 3em 0;
@@ -147,6 +158,9 @@ svg{
             width: 10em;
         }
         .offerTxt{
+            @include mqMax(500px){
+                font-size: 2.5em;;
+            }
             font-size: 3.5em;
             font-weight: 800;
             text-align: center;
@@ -183,11 +197,18 @@ svg{
                 padding: 1.2em 1em;;
             }
         }
+        @include mqMax(500px){
+            width: 18em!important;
+            font-size: 1em!important;
+        }
     }
 }
 .info{
     @include flex();
     .steps{
+        @include mqMax(500px){
+            width: 92vw;
+        }
         @include mqMax(1024px){
             width: 90vw;
         }
@@ -259,6 +280,9 @@ svg{
         color: $txtCol;
         background: $col1;
         h2{
+            @include mqMax(500px){
+                text-align: center;
+            }
             font-size: 2em;
             margin-bottom: .8em;
         }
@@ -279,8 +303,11 @@ footer{
     .icons{
         @include flex();
         width: 100%;
-        background: rgba(0,0,0,0.2);
+        background: rgba(255,255,255,0.2);
         #iconList{
+            @include mqMax(500px){
+                width: 20em;
+            }
             width: 30em;
         }
     }
